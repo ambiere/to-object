@@ -5,9 +5,8 @@
   "main": "src/index.js",
   "type": "module",
   "funding": "https://github.com/sponsors/ambiere",
-  "types": "./src/types/index.d.ts",
   "exports": {
-    "types": "./src/types/index.d.js",
+    "types": "./src/types/index.d.ts",
     "default": "./src/index.js"
   },
   "scripts": {
