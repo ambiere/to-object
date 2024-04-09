@@ -4,7 +4,7 @@
 
 Implemented in [next-clsx]() 
 
-### when
+## When
 
 Import specifier string needs to be constructed dynamically, `require` not supported in esmodule
 environment, dynamic `import` runs asynchronously. Read the file using `node:fs` APIs and parse the content to JSON.
@@ -13,13 +13,12 @@ environment, dynamic `import` runs asynchronously. Read the file using `node:fs`
 
 Most likely to be used on configuration files and anywhere it might be the best choice.
 
-
-### Install
+## Install
 
 ```bash 
 npm install @ambiere/to-json
 ```
-### example
+## Example
 
 ```js
 // module.js  
@@ -53,6 +52,6 @@ terminal log:
 }
 ```
 
-### status
+## Status
 
 :construction: Under development
