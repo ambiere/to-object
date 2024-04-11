@@ -3,9 +3,9 @@ import stripComment from "./lib/strip-comment.js"
 import stripExport from "./lib/strip-export.js"
 import stripVariable from "./lib/strip-variable.js"
 
-export default function toJSON(file) {
+export default function toJSON(string) {
   const cleanLines = []
-  const lines = file.split("\n")
+  const lines = string.split("\n")
   lines.map(line => {
     line = stripComment(line)
     line = stripExport(line)
