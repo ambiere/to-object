@@ -4,7 +4,7 @@
 
 Implemented in [next-clsx](https://github.com/ambiere/clsx)
 
-[![Release](https://github.com/ambiere/project-root/actions/workflows/main.yml/badge.svg)](https://github.com/ambiere/project-root/actions/workflows/main.yml)
+[![Release](https://github.com/ambiere/to-json/actions/workflows/main.yml/badge.svg)](https://github.com/ambiere/to-json/actions/workflows/main.yml)
 
 ## When
 
