@@ -1,8 +1,10 @@
-# to-json
+# toJSON
 
 > Simple javascript utility to parse json-like strings to JSON
 
-Implemented in [next-clsx]() 
+Implemented in [next-clsx](https://github.com/ambiere/clsx) 
+
+[![Release](https://github.com/ambiere/project-root/actions/workflows/main.yml/badge.svg)](https://github.com/ambiere/project-root/actions/workflows/main.yml)
 
 ## When
 
@@ -23,8 +25,10 @@ npm install @ambiere/to-json
 ```js
 // module.js  
 
-const object = {
-  property: 12
+export const object = {
+  property: 12,
+  property2: "module",
+  property3: true
 }
 ```
 
@@ -48,10 +52,20 @@ terminal log:
 
 ```json 
 {
-  "property": 12
+ "property": 12,
+ "property2": "module",
+ "property3": true
 }
 ```
 
 ## Status
 
 :construction: Under development
+
+
+## License
+
+[MIT license][MIT]
+
+[MIT]: https://github.com/ambiere/project-root/blob/main/license
+
