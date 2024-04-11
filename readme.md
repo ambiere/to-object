@@ -1,15 +1,16 @@
-# toJSON
+# to-json
 
 > Simple javascript utility to parse json-like strings to JSON
 
-Implemented in [next-clsx](https://github.com/ambiere/clsx) 
+Implemented in [next-clsx](https://github.com/ambiere/clsx)
 
 [![Release](https://github.com/ambiere/project-root/actions/workflows/main.yml/badge.svg)](https://github.com/ambiere/project-root/actions/workflows/main.yml)
 
 ## When
 
-Import specifier string needs to be constructed dynamically, `require` not supported in esmodule
-environment, dynamic `import` runs asynchronously. Read the file using `node:fs` APIs and parse the content to JSON.
+Import specifier string needs to be constructed dynamically, `require`
+not supported in esmodule environment, dynamic `import` runs asynchronously.
+Read the file using `node:fs` APIs and parse the content to JSON.
 
 >The content of the module to be read, should be a valid javascript object
 
@@ -17,9 +18,10 @@ Most likely to be used on configuration files and anywhere it might be the best 
 
 ## Install
 
-```bash 
+```bash
 npm install @ambiere/to-json
 ```
+
 ## Example
 
 ```js
@@ -31,7 +33,6 @@ export const object = {
   property3: true
 }
 ```
-
 
 ```js
 // index.js 
@@ -50,7 +51,7 @@ readModule("./customPath/to/module")
 
 terminal log:
 
-```json 
+```json
 {
  "property": 12,
  "property2": "module",
@@ -62,10 +63,8 @@ terminal log:
 
 :construction: Under development
 
-
 ## License
 
 [MIT license][MIT]
 
 [MIT]: https://github.com/ambiere/project-root/blob/main/license
-
