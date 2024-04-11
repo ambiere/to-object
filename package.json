@@ -1,6 +1,6 @@
 {
   "name": "@ambiere/to-json",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Parse string to JSON",
   "main": "src/index.js",
   "type": "module",
@@ -13,8 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
-    "./src/index.js",
-    "./src/types/index.d.ts"
+    "./src/"
   ],
   "repository": {
     "type": "git",
