@@ -1,9 +1,9 @@
-import parseToJSON from "./lib/parse-to-json.js"
+import parseToObject from "./lib/parse-to-object.js"
 import stripComment from "./lib/strip-comment.js"
 import stripExport from "./lib/strip-export.js"
 import stripVariable from "./lib/strip-variable.js"
 
-export default function toJSON(string) {
+export default function toObject(string) {
   const cleanLines = []
   const lines = string.split("\n")
   lines.map(line => {
@@ -16,6 +16,6 @@ export default function toJSON(string) {
       return line !== ""
     }
   })
-  return parseToJSON(cleanLines)
+  return parseToObject(cleanLines)
 }
 
