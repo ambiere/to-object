@@ -1,6 +1,6 @@
 {
   "name": "@ambiere/to-object",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Parse string representations of objects into JavaScript objects.",
   "main": "src/index.js",
   "type": "module",
