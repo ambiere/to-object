@@ -1,17 +1,17 @@
-# to-object [![Release](https://github.com/ambiere/to-object/actions/workflows/main.yml/badge.svg)](https://github.com/ambiere/to-object/actions/workflows/main.yml)
+### to-object [![Release](https://github.com/ambiere/to-object/actions/workflows/main.yml/badge.svg)](https://github.com/ambiere/to-object/actions/workflows/main.yml)
 
 >Lightweight utility package designed to simplify— <br>the process of parsing
 string representations of objects into JavaScript objects.
 
 Implemented in [next-clsx](https://github.com/ambiere/clsx)
 
-## Install
+### Install
 
 ```bash
 npm install @ambiere/to-object
 ```
 
-## Case
+### Case
 
 In configuration files when import specifier string/path to the configuration module
 can only be constructed dynamically, hence static imports become impractical, `require`
@@ -45,11 +45,11 @@ console.log(parsedConfigs.config1) // "first"
 Note: The content of the configuration module to be read, should be a valid JavaScript object
 
 
-## Status
+### Status
 
 :construction: Under development
 
-## License
+### License
 
 [MIT license][MIT]
 
