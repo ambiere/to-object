@@ -1,7 +1,7 @@
 {
-  "name": "@ambiere/to-json",
-  "version": "0.1.0",
-  "description": "Parse string to JSON",
+  "name": "@ambiere/to-object",
+  "version": "0.2.0",
+  "description": "Parse string representations of objects into JavaScript objects.",
   "main": "src/index.js",
   "type": "module",
   "funding": "https://github.com/sponsors/ambiere",
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ambiere/to-json.git"
+    "url": "git+https://github.com/ambiere/to-object.git"
   },
   "keywords": [
     "Parse",
@@ -33,7 +33,10 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ambiere/to-json/issues"
+    "url": "https://github.com/ambiere/to-object/issues"
   },
-  "homepage": "https://github.com/ambiere/to-json#readme"
+  "homepage": "https://github.com/ambiere/to-object#readme",
+  "devDependencies": {
+    "tap": "^18.7.0"
+  }
 }
