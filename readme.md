@@ -1,4 +1,4 @@
-### to-object [![Release](https://github.com/ambiere/to-object/actions/workflows/main.yml/badge.svg)](https://github.com/ambiere/to-object/actions/workflows/main.yml)
+## to-object [![Release](https://github.com/ambiere/to-object/actions/workflows/main.yml/badge.svg)](https://github.com/ambiere/to-object/actions/workflows/main.yml)
 
 >Lightweight utility package designed to simplify— <br>the process of parsing
 string representations of objects into JavaScript objects.
