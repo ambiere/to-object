@@ -1,63 +1,49 @@
-# to-json
+# to-object [![Release](https://github.com/ambiere/to-object/actions/workflows/main.yml/badge.svg)](https://github.com/ambiere/to-object/actions/workflows/main.yml)
 
-> Simple javascript utility to parse json-like strings to JSON
+>Lightweight utility package designed to simplify— <br>the process of parsing
+string representations of objects into JavaScript objects.
 
 Implemented in [next-clsx](https://github.com/ambiere/clsx)
-
-[![Release](https://github.com/ambiere/to-json/actions/workflows/main.yml/badge.svg)](https://github.com/ambiere/to-json/actions/workflows/main.yml)
-
-## When
-
-Import specifier string needs to be constructed dynamically, `require`
-not supported in esmodule environment, dynamic `import` runs asynchronously.
-Read the file using `node:fs` APIs and parse the content to JSON.
-
->The content of the module to be read, should be a valid javascript object
-
-Most likely to be used on configuration files and anywhere it might be the best choice.
 
 ## Install
 
 ```bash
-npm install @ambiere/to-json
+npm install @ambiere/to-object
 ```
 
-## Example
+## Case
+
+In configuration files when import specifier string/path to the configuration module
+can only be constructed dynamically, hence static imports become impractical, `require`
+not supported in esmodule environment and dynamic imports, `import()` are not feasible
+due to their asynchronous nature.
 
 ```js
-// module.js  
-
-export const object = {
-  property: 12,
-  property2: "module",
-  property3: true
+const configs = {
+  config1: "first",
+  config2: "second",
+  //other configs
 }
 ```
 
 ```js
-// index.js 
+import toObject from "@ambiere/to-object"
 
-import toJSON from "@ambiere/to-json"
-
-function readModule(customRootPath) {
-  const pathToModule = path.resolve(path.join(customRootPath, "module.js"))
-  const content = fs.readFile(pathToModule, "utf8")
-  const json = toJSON(content)
-  console.log(json) 
-}
-
-readModule("./customPath/to/module")
-```
-
-terminal log:
-
-```json
 {
- "property": 12,
- "property2": "module",
- "property3": true
+//other code omitted
+//in the middle of your code where you need to import the configs
+
+const configs = fs.readFileSync("/dynamically/constructed/import/specifier", "utf8")
+const parsedConfigs = toObject(configs)
+
+console.log(parsedConfigs.config1) // "first"
+//other code omitted
 }
 ```
+
+
+Note: The content of the configuration module to be read, should be a valid JavaScript object
+
 
 ## Status
 
