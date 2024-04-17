@@ -31,24 +31,27 @@ export function stripExports(line: string): string
 export function stripVarDefinition(line: string): string
 
 /**
- * Parse json-like strings to JSON string 
+ * toObject() helper fn
  *
- * Optionally, you can read module content 
- * using node:fs APIs and parse the string content to JSON
+ * @param {string[]} lines
+ * @returns { { [index: string]: any } | undefined }
+ * */
+export function parseToObject(lines: string[]): { [index: string]: any } | undefined
+
+/**
+ * Parse string representations of object to
+ * JavaScript objects.
  *
- * @param {string} file 
- * @returns {string}
+ * @param {string} string
+ * @returns { { [index: string]: any } | undefined } object
  *
  * @example 
- * //module.js
- *
- * export default moduleContent = {name: "to-json", since; 2024}
- *
- * //index.js
- *
- * const content = await readFile("./module.js", "utf8")
- * const json = toJSON(content)
- * console.log(json) // {"name": "to-json", "since: 2024"}
  * 
+ * const string = '{ name: "to-object", since: 2024 }'
+ * const object = toObject(string)
+ *
+ * console.log(object.name)  // "to-object"
+ *
  * */
-export default function toJSON(file: string): string  
+export default function toObject(string: string): { [index: string]: any } | undefined
+
