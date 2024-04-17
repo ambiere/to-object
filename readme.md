@@ -1,17 +1,20 @@
-## to-object [![ci](https://github.com/ambiere/to-object/actions/workflows/main.yml/badge.svg)](https://github.com/ambiere/to-object/actions/workflows/main.yml)
+# to-object [![ci](https://github.com/ambiere/to-object/actions/workflows/main.yml/badge.svg)](https://github.com/ambiere/to-object/actions/workflows/main.yml)
 
->Lightweight utility package designed to simplify— <br>the process of parsing
-string representations of objects into JavaScript objects.
+>Lightweight utility package designed to simplify—
+<br>the process of parsing string representations of objects into JavaScript objects.
 
-Implemented in [next-clsx](https://github.com/ambiere/clsx)
+As implemented in [next-clsx](https://github.com/ambiere/clsx)
 
-## Install
+>contents <br>1. [Installattion](#Installattion)<br>2. [Use case](#Use-case)<br>3. [License](#License)
+
+
+## Installattion
 
 ```bash
 npm install @ambiere/to-object
 ```
 
-## Case
+## Use case
 
 In configuration files when import specifier string/path to the configuration module
 can only be constructed dynamically, hence static imports become impractical, `require`
@@ -29,25 +32,25 @@ const configs = {
 ```js
 import toObject from "@ambiere/to-object"
 
-{
-//other code omitted
-//in the middle of your code where you need to import the configs
+function configure() {
+  // ...
 
-const configs = fs.readFileSync("/dynamically/constructed/import/specifier", "utf8")
-const parsedConfigs = toObject(configs)
+  /*
+  * In your code where
+  * you need to import the configs
+  * */
 
-console.log(parsedConfigs.config1) // "first"
-//other code omitted
+  const configs = fs.readFileSync("/dynamically/constructed/import/specifier", "utf8")
+  const parsedConfigs = toObject(configs)
+
+  console.log(parsedConfigs.config1) // "first"
+
+  // ...
 }
 ```
 
-
-Note: The content of the configuration module to be read, should be a valid JavaScript object
-
-
-## Status
-
-:construction: Under development
+Note: The content of the configuration module/file to be read,
+should be a valid JavaScript object
 
 ## License
 
