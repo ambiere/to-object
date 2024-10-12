@@ -1,0 +1,38 @@
+name: Publish @ambiere/to-object
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  publish:
+    name: Test & Publish
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: latest
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Test
+        run: pnpm run test
+
+      - name: Publish
+        run: |
+          pnpm publish --access public --no-git-checks
+          pnpm deprecate @ambiere/to-object@"< ${{ github.ref_name }}" "This version id deprecated, please upgrade to the latest version"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
