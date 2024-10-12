@@ -1,7 +1,7 @@
-import stripExport from "./lib/strip-export.js"
-import stripComment from "./lib/strip-comment.js"
-import stripVariable from "./lib/strip-variable.js"
-import parseToObject from "./lib/parse-to-object.js"
+import stripExport from "./lib/stripExport.js"
+import stripComment from "./lib/stripComment.js"
+import stripVariable from "./lib/stripVariable.js"
+import parseToObject from "./lib/parseObject.js"
 
 export default function toObject(string) {
   const cleanLines = []
